@@ -1,12 +1,12 @@
 {
   "name": "apn",
   "description": "An interface to the Apple Push Notification service for Node.js",
-  "version": "1.7.3",
+  "version": "3.0.0-alpha1",
   "author": "Andrew Naylor <argon@mkbot.net>",
   "contributors": [
     {
-      "name": "Andrew Naylor",
-      "email": "argon@mkbot.net"
+      "name": "Florian Reinhart",
+      "email": "florian.reinhart@gmail.com"
     }
   ],
   "keywords": [
@@ -18,25 +18,27 @@
     "notifications"
   ],
   "main": "index.js",
+  "types": "index.d.ts",
   "bugs": {
-    "email": "argon@mkbot.net",
-    "url": "https://github.com/argon/node-apn/issues"
+    "email": "florian.reinhart@gmail.com",
+    "url": "https://github.com/node-apn/node-apn/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/argon/node-apn.git"
+    "url": "https://github.com/node-apn/node-apn.git"
   },
   "dependencies": {
-    "node-forge": "^0.6.20",
-    "q": "^1.1.0"
+    "debug": "^3.1.0",
+    "jsonwebtoken": "^8.1.0",
+    "node-forge": "^0.7.1",
+    "verror": "^1.10.0"
   },
   "devDependencies": {
-    "chai": "2.x",
-    "chai-as-promised": "*",
-    "mocha": "*",
-    "rewire": "^2.3.0",
-    "sinon": "^1.12.2",
-    "sinon-chai": "^2.6.0"
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^4.0.1",
+    "sinon": "^4.1.3",
+    "sinon-chai": "^2.14.0"
   },
   "scripts": {
     "test": "node_modules/.bin/mocha"
@@ -44,8 +46,15 @@
   "jshintConfig": {
     "node": true
   },
+  "eslintConfig": {
+    "ecmaVersion": 6,
+    "env": {
+      "es6": true,
+      "node": true
+    }
+  },
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">= 8.9.1"
   },
   "license": "MIT"
 }
